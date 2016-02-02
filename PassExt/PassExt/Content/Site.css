@@ -1,0 +1,685 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    background: url('img/diamond_upholstery.png');
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*My*/
+/* Перекрытие страницы */
+#pageOverlay {
+    background: #ffffff;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0px;right: 0px;bottom: 0px;left: 0px;
+    z-index: 9999;
+    display: none;
+}
+
+#pageOverlay-message {
+    background: #eeeeee;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    font-size: 28px;
+    color: #555555;
+    text-align: center;
+}
+#pageOverlay-message.err {
+    background: #c93939;
+    color: #eeeeee;
+}
+#pageOverlay-message.ok {
+    background: #92b31f;
+    color: #ffffff;
+}
+
+/*Макет*/
+#logo { position: absolute;top: 0px;left:0;right:0;margin-left:auto;margin-right:auto;max-width: 25%;min-width: 155px; width: 258px;padding: 0;}
+#logo img { max-width: 100%;}
+#baner {width: 100%;margin: 0;padding: 0;position: relative;overflow: hidden;}
+    #baner img {
+        /*animation: imgScale 2s;*/
+        width: 100%;
+        /*position: relative;*/
+    }
+#baner-text {
+    line-height: 120%;
+    font-size: 50px; color: white;text-align: center;font-family: MyriadProBold, Georgia Arial Verdana;width: 100%;position: absolute;top: 15%; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#navbar { width: 100%;height: 53px; }
+
+.big_btn {
+    font-size: 22px;
+    border-radius: 7px;
+    border: 3px solid black;
+    padding: 40px 0px 40px 0px;
+    cursor: pointer;
+    color: white;
+    font-family: Verdana;
+    font-weight: bold;
+    text-align: center;
+    bottom: 15%;
+}
+#btn_blue, #btn_rasp {position: absolute;left:65%;width: 25%; background: #12aaeb;transition: background 0.5s; }
+#btn_blue:hover, #btn_rasp:hover {transition: background 0.5s; background: #45c7ff; text-shadow: -1px 0 #777777, 0 1px #777777, 1px 0 #777777, 0 -1px #777777;}
+#btn_green { position: absolute;left: 35%;width: 25%; background: #92b31f;transition: background 0.5s}
+#btn_green:hover {transition: background 0.5s; background: #b5e40f; text-shadow: -1px 0 #777777, 0 1px #777777, 1px 0 #777777, 0 -1px #777777;}
+#btn_rasp {left: 5%; width: 25%}
+
+.green_text { color: #92b31f;}
+
+/*Слайдер*/
+#slide_img2 { opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%;height: 100%; }
+/*КНОПКА НАВЕРХ*/
+#scrollup {
+position: fixed; /* фиксированная позиция */
+padding: 5px 5px 5px; /* отступы */
+right: 5px; /* отступ слева */
+bottom: 5px; /* отступ снизу */
+display: none; /* спрятать блок */
+cursor: pointer;
+    z-index: 9999;
+}
+
+/*ШАГИ*/
+#reg_form {
+    width: 100%;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+.form_header {
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    color: #12aaeb;
+    font-family: MyriadProBold;
+    margin: 20px 0px 20px 0px;
+}
+#reg_header {
+    margin-top: 20px;
+}
+.step {
+    width: 33%;
+    min-width: 320px;
+    height: 370px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+.step_number {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #12aaeb;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    padding: 12px 0px 0px 29px;
+    float: left;
+}
+.step_title
+{
+    width: 239px;
+    height: 80px;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    line-height: 110%;
+    font-size: 30px;
+    color: #12aaeb;
+    float: left;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+.step_content {
+    clear: left;
+}
+#step4 .step_title{
+    font-size: 24px;
+}
+.step.done .step_number { background: #92b31f; }
+.step.done .step_title { color: #92b31f; }
+
+.step.diactivated {
+    opacity: 0.7;
+}
+.step.diactivated .step_number { background: #c0c0c0; }
+.step.diactivated .step_title { color: #c0c0c0; }
+
+/*НАПРАВЛЕНИЯ*/
+#ways {
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+}
+.way {
+    border-left: 6px solid #e0e0e0;
+    padding-left: 40px;
+    height: 80px;
+    margin-left: 37px;
+    cursor: pointer;
+    border-bottom: 2px dotted #e0e0e0;
+}
+.way:hover {
+    border-left: 6px solid #c0c0c0;
+}
+.way:hover .town_from {
+   color: #999999;
+}
+.way:hover .town_to {
+   color: #555555;
+}
+.way.selected {
+   border-left: 6px solid #92b31f;
+}
+.way.selected .town_to {
+    font-size: 22px;
+    color:  #92b31f;
+}
+.way.selected .town_from {
+    color:  #555555;
+}
+
+.town_from {
+    padding-top: 12px;
+    font-family: MyriadProRegular;
+    font-size: 16px;
+    color: #c0c0c0;
+}
+.town_to {
+    font-family: MyriadProBold;
+    font-size: 20px;
+    color: #777777;
+}
+
+
+/*ДАТА*/
+.datepicker
+{
+font-family: MyriadProBold, Georgia Arial Verdana;
+font-size: 14px;
+    margin-left: 50px;
+    color: #555555;
+}
+
+
+/*ВРЕМЯ*/
+#times {
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+}
+.time {
+    border-left: 6px solid #e0e0e0;
+    padding-left: 40px;
+    padding-top: 25px;
+    height: 80px;
+    margin-left: 37px;
+    cursor: pointer;
+    border-bottom: 2px dotted #e0e0e0;
+    font-family: MyriadProBold, Georgia Arial Verdana;
+    font-size: 20px;
+    color: #777777;
+}
+.time:hover {
+    border-left: 6px solid #c0c0c0;
+    color: #555555;
+}
+.time.selected {
+   border-left: 6px solid #92b31f;
+    color:  #92b31f;
+}
+/*ТОЧКИ СБОРА*/
+#points{ 
+    height: 250px;
+    width: 320px;
+    overflow: hidden;
+margin-left: 37px;
+}
+
+#point_search {
+    margin-left: 38px;
+    width: 290px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    font-size: 18px;
+    color: #555555;
+}
+.point {
+    padding: 2px 0px 2px 35px;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    font-size: 18px;
+    color: #555555;
+    cursor: pointer;
+    border-left: 6px solid #e0e0e0;
+}
+.point:hover {
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    font-size: 18px;
+    color: #333333;
+    cursor: pointer;
+    border-left: 6px solid #c0c0c0;
+}
+.point.selected {
+    border: 1px solid #86a41c;
+   border-left: 6px solid #92b31f;
+   background-color:  #92b31f;
+    width: 282px;
+    color: white;
+    margin-top: -1px;
+}
+.point.hidden {
+    display: none;
+}
+
+/*ПОДТВЕРЖДЕНИЕ ЗАКАЗА*/
+#accept {
+    margin-left: 80px;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+}
+#fam, #tel {
+    width: 95%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    font-size: 16px;
+    color: #555555;
+    margin-top: 10px;
+}
+#accept_button, .accept_button {
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background: #92b31f;
+    color: white;
+    margin-top: 10px;
+}
+
+
+/*РАСПИСАНИЕ*/
+#schedule_form {
+    position: relative;
+}
+#schedgirl {
+    display: inline-block;
+    margin-bottom: -25px;
+    margin-top: -100px;
+    width: 100%;
+    max-width: 455px;
+    min-width: 320px;
+}
+#sced_header {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -300px;
+    text-align: center;
+    width: 100%;
+    max-width: 70%;
+}
+#sched_content {
+    background: url('img/white_leather.png');
+    width: 100%;
+    border-top: 2px solid #ffffff;
+    /*border-bottom: 1px solid #e0e0e0;*/
+    -webkit-box-shadow: 1px -1px 0 0 rgba(0,0,0,0.07);
+    box-shadow: 1px -1px 0 0 rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+
+/*ТАБЛИЦА РАСПИСАНИЯ*/
+#schedule {
+    padding: 30px 0px 30px 0px;
+}
+.sched_elem {
+    display: inline-block;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #555555;
+    width: 10%;
+    min-width: 120px;
+    margin: 0;
+    margin-right: -4px;
+    color: #333333;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#towns {
+    width: 27%;
+    min-width: 240px;
+    font-family: MyriadProBold, Georgia Arial Verdana;
+    font-size: 23px;
+    color: white;
+}
+.sched_elem div:first-child { 
+    font-size: 36px;
+}
+.sched_row {
+    height: 120px;
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.sched_elem:nth-child(even) .sched_row {
+    opacity: 0.95;
+    color: #222222;
+}
+.sched_elem:not(#towns):hover .sched_row {
+    opacity: 0.85;
+    color: #000000;
+}
+.sched_elem:not(#towns) .sched_row:hover {
+    background-image: url(img/white.png);
+}
+/*.orange_bg { background: #FFBF77;}
+.purple_bg { background: #9684F7;}
+.blue_bg { background: #79CFF5;}
+.green_bg { background: #FFE377;}*/
+
+.orange_bg { background: #e67e22;}
+.purple_bg { background: #8e44ad;}
+.blue_bg { background: #3498db;}
+.green_bg { background: #2ecc71;}
+
+/*КАРТА*/
+#card_form {
+    background: url('img/white_leather.png');
+}
+#card_header {
+    margin-top: 0px;
+}
+#card_content {
+    border: 3px solid #12aaeb;
+    margin: 0px 0px 0px 0px;
+}
+
+/*ЛИЧНЫЙ КАБИНЕТ И ПОГОДА*/
+
+#lcab_form {
+    /*background: url('img/glass-window.jpg');*/
+    width: 100%;
+    min-height: 700px;
+}
+.lcab_box {
+    float: left;
+    width: 50%;
+}
+
+#lcab_inp, #lcab_inp2 {
+    margin-left: auto;
+  margin-right: auto;
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#lcab_inp input, #lcab_inp2 input {
+    width: 100%;
+    max-width: 300px;
+     height: 40px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 10px;
+}
+#lcab_button {
+    padding: 12px 0px 12px 0px;
+}
+
+/*Запрет выделения*/
+#reg_form, #schedule_form, #lcab_form, .big_btn {
+    user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/*ПОГОДА*/
+#weather_box {
+    text-align: center;
+}
+.weather {
+     margin-left: auto;
+  margin-right: auto;
+    width: 300px;
+    }
+.weather table { width: 100%;}
+/*АНИМАЦИЯ*/
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+ @keyframes imgScale {
+  0% {
+    transform: scale(1.2);
+    /*-webkit-filter: blur(0px);*/
+  }
+  100% {
+    transform: scale(1);
+    /*-webkit-filter: blur(0px);*/
+  }
+}
+
+
+/*Разрешение 1280*/
+ @media all and (max-width: 1280px) {
+    #baner-text { font-size: 36px;color: white;text-align: center;font-family: MyriadProBold, Georgia Arial Verdana; width: 100%;position: absolute;top: 15%; }
+
+   }
+    /*Разрешение 960*/
+ @media all and (max-width: 960px) {
+    #baner-text { top: 15%; }
+    .big_btn {font-size: 20px;bottom: 10%; padding: 20px 0px 20px 0px;}
+    #card_content {
+        margin: 0px 25px 0px 25px;
+    }
+   }
+   /*Разрешение 768*/
+ @media all and (max-width: 768px) {
+    #baner-text { top: 12%; font-size: 26px; }
+    .big_btn {font-size: 16px;bottom: 10%;}
+    .lcab_box {
+    width: 100%;
+}
+   }
+  /*Разрешение 640*/
+ @media all and (max-width: 640px) {
+    #baner-text { font-size: 22px; top: 10%; }
+    .big_btn {font-size: 14px;bottom: 10%;}
+    #sced_header {
+        background: url('img/white_leather.png');
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        border-top: 2px solid #ffffff;
+    -webkit-box-shadow: 1px -1px 0 0 rgba(0,0,0,0.07);
+    box-shadow: 1px -1px 0 0 rgba(0,0,0,0.07);
+    }
+
+    #sched_content {
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+   }
+ /*Разрешение 480*/
+  @media all and (max-width: 480px) {
+    #baner-text { display: none; }
+    #btn_blue, #btn_rasp, #btn_green { position: relative;width: 100%;float: left;left: auto;border: none;border-radius: 0; }
+    #baner img { display: none;}
+    .form_header { font-size: 32px; }
+    .step_title {
+        font-size: 26px;
+    }
+   }
+
+
+ /*ШРИФТЫ*/
+
+  /* font-family: "MyriadProRegular"; */
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProBold"; */
+@font-face {
+    font-family: "MyriadProBold";
+    src: url("../fonts/MyriadProBold/MyriadProBold.eot");
+    src: url("../fonts/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
+    url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProItalic"; */
+@font-face {
+    font-family: "MyriadProItalic";
+    src: url("../fonts/MyriadProItalic/MyriadProItalic.eot");
+    src: url("../fonts/MyriadProItalic/MyriadProItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProItalic/MyriadProItalic.woff") format("woff"),
+    url("../fonts/MyriadProItalic/MyriadProItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProSemiBold"; */
+@font-face {
+    font-family: "MyriadProSemiBold";
+    src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot");
+    src: url("../fonts/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"),
+    url("../fonts/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProBoldItalic"; */
+@font-face {
+    font-family: "MyriadProBoldItalic";
+    src: url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot");
+    src: url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.woff") format("woff"),
+    url("../fonts/MyriadProBoldItalic/MyriadProBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProSemiBoldItalic"; */
+@font-face {
+    font-family: "MyriadProSemiBoldItalic";
+    src: url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot");
+    src: url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff") format("woff"),
+    url("../fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* ------- ЭФЕКТЫ ---------- */
+
+
+
+
+
+/* ------- SPINNER ---------- */
+.spinner {
+    cursor: default;
+    font-family: MyriadProRegular, Georgia Arial Verdana;
+    }
+
+.spinner table {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+}
+
+.spinner .spinplus {
+    padding: 3px 3px 0px 3px;
+    line-height: 100%;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.spinner .spinminus {
+    padding: 0px 3px 3px 3px;
+    text-align: center;
+    line-height: 100%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.spinner .value {
+    padding: 5px;
+}

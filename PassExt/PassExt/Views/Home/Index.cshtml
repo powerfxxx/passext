@@ -1,0 +1,189 @@
+﻿<div id="reg_form">
+    <h1 id="reg_header" class="form_header">РЕГИСТРАЦИЯ НА РЕЙС</h1>
+    <div id="step1" class="step">
+        <div class="step_number">
+            1
+        </div>
+        <div class="step_title">
+            ВЫБИРИТЕ НАПРАВЛЕНИЕ
+        </div>
+        <div id="ways" class="step_content mCustomScrollbar" data-mcs-axis="y" data-mcs-theme="minimal-dark">
+            <div class="way">
+                <div class="town_from">Кулебаки</div>
+                <div class="town_to">Нижний Новгород</div>
+            </div>
+            <div class="way">
+                <div class="town_from">Нижний Новгород</div>
+                <div class="town_to">Кулебаки</div>
+            </div>
+            <div class="way">
+                <div class="town_from">Кулебаки</div>
+                <div class="town_to">Муром</div>
+            </div>
+        </div>
+    </div>
+    <div id="step2" class="step">
+        <div class="step_number">
+            2
+        </div>
+        <div class="step_title">
+            ВЫБИРИТЕ ДАТУ ПОЕЗДКИ
+        </div>
+        <div id="date" class="step_content">
+            <div id="datepicker" data-date-format="dd/mm/yyyy"></div>
+      </div>
+    </div>
+    <div id="step3" class="step diactivated">
+        <div class="step_number">
+            3
+        </div>
+        <div class="step_title">
+            ВЫБИРИТЕ ВРЕМЯ ОТПРАВЛЕНИЯ
+        </div>
+        <div id="times" class="step_content mCustomScrollbar" data-mcs-axis="y" data-mcs-theme="minimal-dark">
+            <div class="time">05:00</div>
+            <div class="time">07:00</div>
+            <div class="time">10:00</div>
+        </div>
+    </div>
+    <div id="step4" class="step diactivated">
+        <div class="step_number">
+            4
+        </div>
+        <div class="step_title">
+            ВЫБИРИТЕ ТОЧКИ СБОРА И ЧИСЛО ПАССАЖИРОВ
+        </div>
+        <input type="text" id="point_search" placeholder="Введите название улицы" title="Введите первые 2 буквы названия улицы, школы, больницы" />
+        <div id="points" class="step_content mCustomScrollbar" data-mcs-axis="y" data-mcs-theme="minimal-dark" data-scrollinertia="0">
+            <div id="points_box">
+                <div class="point">Маяковского-Догадина</div>
+                <div class="point">Войкова-Железнодорожная</div>
+                <div class="point">Войкова-Циолковскго</div>
+                <div class="point">Войкова-Мира</div>
+                <div class="point">ФОК</div>
+                <div class="point">Школа №9</div>
+            </div>
+        </div>
+    </div>
+    <div id="step5" class="step diactivated">
+        <div class="step_number">
+            5
+        </div>
+        <div class="step_title">
+            ПОДТВЕРЖДЕНИЕ ЗАКАЗА
+        </div>
+        <div id="accept" class="step_content">
+            <div id="goto_title">Вы поедите в</div>
+            <div id="total_order">НИЖНИЙ НОВГОРОД 25 АВГУСТА 2015<br/>В 6:30 НА МАЯКОВСКОГО-ДОГАДИНА<br />2 ЧЕЛОВЕКА
+            </div>
+            <input type="text" id="fam" placeholder="Ваша фамилия" title="Введите вашу фамилию"/>
+            <input type="text" id="tel" placeholder="Ваш номер телефона" title="Введите ваш номер телефона" />
+            <button id="accept_button">ПОДТВЕРЖДАЮ ЗАКАЗ</button>
+        </div>
+    </div>
+</div>
+<div id="schedule_form">
+    <img id="schedgirl" src="~/Content/img/schedgirl.png"/>
+    <h1 id="sced_header" class="form_header">РАСПИСАНИЕ</h1>
+    <div id="sched_content">
+        <div id="schedule">
+            <div id="towns" class="sched_elem">
+                <div class="sched_row"></div>
+                <div class="sched_row orange_bg">Кулебаки - <br/>Нижний Новгород</div>
+                <div class="sched_row purple_bg">Нижний Новгород - <br />Кулебаки</div>
+                <div class="sched_row blue_bg">Кулебаки - <br />Муром</div>
+                <div class="sched_row green_bg ">Муром - <br />Кулебаки</div>
+            </div>
+            <div id="pn" class="sched_elem">
+                <div class="sched_row">ПН</div>
+                <div class="sched_row orange_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row purple_bg">16:00, 17:00, 18:30</div>
+                <div class="sched_row blue_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row green_bg ">5:00, 7:00, 9:00, 10:00, 12:00</div>
+            </div>
+            <div id="vt" class="sched_elem">
+                <div class="sched_row">ВТ</div>
+                <div class="sched_row orange_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row purple_bg">16:00, 17:00, 18:30</div>
+                <div class="sched_row blue_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row green_bg ">5:00, 7:00, 9:00, 10:00, 12:00</div>
+            </div>
+            <div id="sr" class="sched_elem">
+                <div class="sched_row">СР</div>
+                <div class="sched_row orange_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row purple_bg">16:00, 17:00, 18:30</div>
+                <div class="sched_row blue_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row green_bg ">5:00, 7:00, 9:00, 10:00, 12:00</div>
+            </div>
+            <div id="cht" class="sched_elem">
+                <div class="sched_row">ЧТ</div>
+                <div class="sched_row orange_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row purple_bg">16:00, 17:00, 18:30</div>
+                <div class="sched_row blue_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row green_bg ">5:00, 7:00, 9:00, 10:00, 12:00</div>
+            </div>
+            <div id="pt" class="sched_elem">
+                <div class="sched_row">ПТ</div>
+                <div class="sched_row orange_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row purple_bg">16:00, 17:00, 18:30</div>
+                <div class="sched_row blue_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row green_bg ">5:00, 7:00, 9:00, 10:00, 12:00</div>
+            </div>
+            <div id="sb" class="sched_elem">
+                <div class="sched_row">СБ</div>
+                <div class="sched_row orange_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row purple_bg">16:00, 17:00, 18:30</div>
+                <div class="sched_row blue_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row green_bg ">5:00, 7:00, 9:00, 10:00, 12:00</div>
+            </div>
+            <div id="vs" class="sched_elem">
+                <div class="sched_row">ВС</div>
+                <div class="sched_row orange_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row purple_bg">16:00, 17:00, 18:30</div>
+                <div class="sched_row blue_bg">5:00, 7:00, 9:00, 10:00, 12:00</div>
+                <div class="sched_row green_bg ">5:00, 7:00, 9:00, 10:00, 12:00</div>
+            </div>
+            <br/>
+            <br/>
+        </div>
+    </div>
+</div>
+<div id="card_form">
+    <h1 id="card_header" class="form_header">КАРТА ГОРОДА КУЛЕБАКИ</h1>
+    <div id="card_content">
+        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=eu6Drp6vC5rYCFfZpcep5SRNqZHcg1lr&width=100%&height=650"></script>
+    </div>
+</div>
+<div id="lcab_form">
+    <div id="lcab" class="lcab_box">
+        <h1 class="form_header">Вход в личный кабинет</h1>
+        <div id="lcab_inp">
+            <input id="lcab_phone" type="tel" placeholder="Номер телефона"/>
+            <input id="lcab_code" type="number" placeholder="Личный код"/>
+            <button id="lcab_button" class="accept_button">Войти</button>
+        </div>
+        <h1 class="form_header">Забыли личный код?</h1>
+        <div id="lcab_inp2">
+            <input id="lcab_phone2" type="tel" placeholder="Введите номер мобильного телефона" />
+            <button id="lcab_button2" class="accept_button">Выслать личный код</button>
+        </div>
+    </div>
+    <div id="weather_box" class="lcab_box">
+        <h1 class="form_header">Погода</h1>
+        <div id="weather_nn" class="weather">
+        </div>
+        <div id="weather_mur" class="weather">
+        </div>
+        <div id="weather_kul" class="weather">
+        </div>
+    </div>
+ </div>
+<link href="~/Content/weather.css" rel="stylesheet" />
+<link href="~/Content/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.easing.1.3.js"></script>
+<script src="~/Scripts/monkeecreate-jquery.simpleWeather-3.0.2-0-ged11490/jquery.simpleWeather.min.js"></script>
+<script src="~/Scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="~/Scripts/passext/reg_controller.js"></script>
+<script src="~/Scripts/jquery.inputmask/min/jquery.inputmask.bundle.min.js"></script>
+<script src="~/Scripts/passext/index.js"></script>
+
